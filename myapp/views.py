@@ -3,7 +3,7 @@ from django.http import JsonResponse
 
 def get_recipes(request):
     ingredients = request.GET.get('ingredients')
-    api_key = '30bac7aec89f44e794f5f59aabd28bb8'
+    api_key = 'API Key'
     url = f'https://api.spoonacular.com/recipes/findByIngredients?ingredients={ingredients}&number=5&apiKey={api_key}'
 
     response = requests.get(url)
